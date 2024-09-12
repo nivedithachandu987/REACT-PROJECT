@@ -1,0 +1,158 @@
+/* Container */
+.weather-container {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  margin-top: 20px;
+  /* Multi-color background gradient */
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #e6dee9);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
+}
+
+/* Header */
+.weather-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form */
+.weather-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Input */
+.weather-input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.weather-input:focus {
+  border-color: #007bff;
+}
+
+/* Button */
+.weather-button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.weather-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.weather-button:active {
+  background-color: #003d80;
+  transform: scale(0.95);
+}
+
+/* Radio buttons */
+.weather-unit-selection {
+  margin-top: 10px;
+}
+
+.unit-label {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Weather Card */
+.weather-card {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.weather-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+
+/* Weather Icon */
+.weather-icon {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+/* Temperature */
+.weather-temperature {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Description */
+.weather-description {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555;
+}
+
+/* Humidity */
+.weather-humidity {
+  font-size: 1rem;
+}
+
+/* Wind Speed */
+.weather-wind-speed {
+  font-size: 1rem;
+}
+
+/* Error */
+.weather-error {
+  color: red;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Spinner */
+.weather-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #007bff;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

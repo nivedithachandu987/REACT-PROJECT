@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+.services-container {
+  padding: 2rem;
+  background: linear-gradient(135deg, #fe7857, #fba969); /* Two-tone gradient background */
+  font-family: Arial, sans-serif;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.services-header img.services-image {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  object-fit: cover;
+  animation: float 4s ease-in-out infinite; /* Apply smooth up and down animation */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
+}
+
+.services-header h1 {
+  font-size: 2.5rem;
+  color: #0d0d0d;
+}
+
+.services-header p {
+  font-family: cursive;
+  font-size: 1.2rem;
+  color: #efe8e8;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.service-card {
+  background: rgba(0, 0, 0, 0.7); /* Updated card colors to black transparent */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  color: #ece5e5; /* White text color */
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  animation: shake 3s ease-in-out;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-10px); }
+  20% { transform: translateX(10px); }
+  30% { transform: translateX(-10px); }
+  40% { transform: translateX(10px); }
+  50% { transform: translateX(-10px); }
+  60% { transform: translateX(10px); }
+  70% { transform: translateX(-10px); }
+  80% { transform: translateX(10px); }
+  90% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+.service-title {
+  font-size: 1.5rem;
+  color: #f5702e; /* White text color */
+  margin: 0.5rem 0;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #ddd; /* Light grey color */
+}
+
+.testimonials {
+  background: rgba(55, 27, 5, 0.7);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  color: #fff; /* White text color for the section */
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #f6f352;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background: rgba(57, 28, 4, 0.7); /* Black transparent background */
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #ffffff; /* White text color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for hover effect */
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-feedback {
+  font-size: 1rem;
+  color: #ffffff; /* White text color */
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  color: #ccc; /* Light grey color */
+}
+
+.testimonial-role {
+  font-style: italic;
+  color: #bbb; /* Light grey color */
+}
+
+.cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  font-size: 1.2rem;
+  color: #434242; /* Light grey color */
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* Keyframe animation for smooth up and down movement */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up by 10px */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-list {
+    flex-direction: column;
+  }
+}

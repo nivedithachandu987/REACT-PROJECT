@@ -1,0 +1,200 @@
+/* AboutPage.css */
+
+.about-section {
+  padding: 20px;
+  background: linear-gradient(to bottom right, #9c27b0, #f06292); /* Light purple to light pink gradient */
+  color: #fff; /* White text color for contrast */
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.carousel-image {
+  width: 100%;
+  max-width: 300px; /* Adjust the max width as needed */
+  height: 300px; /* Fixed height for consistency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 50%; /* Ensures circular container */
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Keeps the image circular */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  animation: moveUpDown 4s ease-in-out infinite; /* Apply the animation */
+  transition: transform 0.3s ease; /* Smooth transition for any transformations */
+}
+
+/* Keyframes for the up and down movement */
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Increased movement distance */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.carousel-content {
+  max-width: 600px;
+}
+
+.carousel-content h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #ffeb3b; /* Yellow color for h1 */
+}
+
+.carousel-content p {
+  font-size: 1.2em;
+  margin: 10px 0 0;
+  color: #fff; /* White color for paragraphs */
+}
+
+.details-section {
+  display: flex;
+  justify-content: space-around; /* Distribute space around items */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  margin: 20px 0;
+}
+
+.detail-card {
+  text-align: center;
+  margin: 20px;
+  background: rgba(0, 0, 0, 0.7); /* Slightly transparent background for cards */
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff; /* White text color for readability */
+  flex: 1 1 45%; /* Wider width for cards */
+  max-width: 400px; /* Increased max-width for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.detail-card:hover {
+  transform: translateY(-10px); /* Moves the card slightly up */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Adds a shadow to create a lifted effect */
+}
+
+.detail-card h2 {
+  color: #ff5722; /* Orange color for h2 */
+}
+
+.detail-card ul li {
+  color: #fff; /* White color for list items */
+}
+
+
+.contact-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-section h2 {
+  color: #2196f3; /* Blue color for h2 in contact section */
+}
+/* Existing Styles... */
+
+.team-section {
+  margin: 40px 0; /* Increased margin for better spacing */
+  text-align: center; /* Center text for the section */
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center; /* Center team members horizontally */
+  align-items: center; /* Center team members vertically */
+  flex-wrap: wrap;
+  gap: 30px; /* Increased space between team members */
+}
+
+.team-member {
+  text-align: center;
+  margin: 10px;
+  background: rgba(0, 0, 0, 0.6); /* Slightly transparent background for team members */
+  padding: 15px; /* Padding around content */
+  border-radius: 10px; /* Rounded corners for the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.team-member:hover {
+  transform: translateY(-10px); /* Moves the card slightly up */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Adds a shadow to create a lifted effect */
+}
+
+.team-member img {
+  width: 150px; /* Adjust as needed */
+  height: 150px; /* Adjust as needed */
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+  border: 3px solid #fff; /* Thicker white border to stand out */
+  margin-bottom: 15px; /* Space between image and text */
+}
+
+.team-member h3 {
+  color: #4caf50; /* Green color for h3 */
+  margin: 10px 0; /* Margin around the name */
+  font-size: 1.2em; /* Slightly larger font size for emphasis */
+}
+
+.team-member p {
+  color: #ddd; /* Lighter color for position text */
+  margin: 0; /* Remove default margin */
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin-top: 40px; /* Increased margin for better spacing */
+  padding: 20px; /* Padding around the section */
+  background: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+  border-radius: 10px; /* Rounded corners for the section */
+}
+
+.contact-section h2 {
+  color: #2196f3; /* Blue color for h2 in contact section */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+.contact-section p {
+  font-size: 1.2em; /* Larger font size for better readability */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .team-grid {
+    gap: 15px; /* Reduced gap on smaller screens */
+  }
+  
+  .team-member img {
+    width: 100px; /* Adjusted image size for smaller screens */
+    height: 100px; /* Adjusted image size for smaller screens */
+  }
+  
+  .team-member h3 {
+    font-size: 1em; /* Adjusted font size for smaller screens */
+  }
+  
+  .contact-section p {
+    font-size: 1em; /* Adjusted font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 15px; /* Adjusted padding for smaller screens */
+  }
+}

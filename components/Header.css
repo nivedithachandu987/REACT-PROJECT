@@ -1,0 +1,203 @@
+/* General Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Multishade gradient background */
+  box-shadow: 0 2px 90px rgba(246, 244, 244, 0.945);
+  flex-wrap: wrap; /* Allow wrapping of elements */
+  position: relative;
+  transition: padding 0.3s ease; /* Add transition for padding */
+}
+
+/* Logo Styles */
+.logo h1 {
+  font-size: 24px;
+  color: #fff; /* Light text for the logo to contrast with the background */
+  margin: 0;
+}
+
+/* Remove underline from logo link */
+.logo a {
+  text-decoration: none; /* Remove underline from logo link */
+}
+
+/* Navigation Menu */
+.nav-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center the menu items */
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center items in the flex container */
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap; /* Allow wrapping of items */
+}
+
+.nav-menu ul li {
+  margin-right: 20px;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.nav-menu ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #000000; /* Light text for the navigation links */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #080808;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.dropdown-menu.show {
+  display: block; /* Show dropdown when 'show' class is applied */
+}
+
+.dropdown-menu li {
+  padding: 5px 20px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none; /* Remove underline from dropdown links */
+  color: #333; /* Dark text for the dropdown links */
+  transition: color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Arrow Styles */
+.arrow {
+  margin-left: 5px;
+  border: solid #000000; /* Light color for the arrow */
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  transition: transform 0.3s ease;
+}
+
+.arrow.down {
+  transform: rotate(45deg); /* Downward pointing arrow */
+}
+
+.arrow.up {
+  transform: rotate(-135deg); /* Upward pointing arrow */
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push the search bar to the right side */
+}
+
+.search-bar input {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  width: 200px;
+  transition: width 0.4s ease;
+}
+
+.search-bar input:focus {
+  width: 300px; /* Expand search bar on focus */
+  outline: none;
+}
+
+/* Hamburger Menu for smaller screens */
+.navbar-toggler {
+  display: none;
+  background-color: #8099e6;
+  border: none;
+  color: #070707;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.navbar-toggler-icon {
+  width: 30px;
+  height: 3px;
+  background-color: #4a4747;
+  margin: 6px 0;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
+
+  .nav-menu {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 10px; /* Add spacing for the search bar */
+    text-align: center;
+  }
+
+  .search-bar input {
+    width: 100%; /* Full width for small screens */
+    max-width: 250px; /* Limit maximum width */
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-menu ul {
+    justify-content: center; /* Center items for medium screens */
+  }
+
+  .nav-menu ul li {
+    margin-right: 15px; /* Reduce margin for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-menu ul li a {
+    font-size: 14px; /* Smaller font size for small screens */
+  }
+}
